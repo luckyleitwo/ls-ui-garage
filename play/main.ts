@@ -3,7 +3,6 @@ import App from './app.vue'
 import { WIcon } from '@ls-g/components/icon'
 import { WButton } from '@ls-g/components/button'
 import '@ls-g/theme-chalk/src/index.scss'
-import 'element-plus/theme-chalk/index.css'
 
 import * as comp from "@ls-g/components"
 

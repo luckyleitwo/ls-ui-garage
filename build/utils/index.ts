@@ -17,7 +17,7 @@ export const run = async (com:string)=>{
     })
 }
 
-// 重写打包后的@w-plus 路径
+// 重写打包后的@ls-g 路径
 export const pathRewriter = (format) => {
     return (id: string) => {
         id = id.replaceAll("@ls-g", `ls-g/${format}`);

@@ -1,7 +1,6 @@
 // 打包方式：串行(series)  并行(parallel)
 import { series, parallel } from "gulp";
-// @ts-ignore
-import { genTypes } from "./gen-types.ts";
+import { genTypes } from "./gun-type";
 import { withTaskName, run } from "./utils";
 import { outDir, wpRoot } from "./utils/paths";
 
@@ -35,6 +34,6 @@ export default series(
 
 // 任务执行器 gulp 任务名 就会执行对应的任务
 // @ts-ignore
-export * from "./full-component.ts";
+export * from "./full-component";
 // @ts-ignore
-export * from "./component.ts";
+export * from "./component";

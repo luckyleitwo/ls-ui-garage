@@ -1,18 +1,14 @@
 <template>
-  <el-button :type="type" @click="handlerClick">Primary</el-button>
+  <buttom>131</buttom>
 </template>
 
 <script lang="ts">
-import { ElButton } from "element-plus";
 import { defineComponent } from "vue";
 import { buttonProps } from "./button";
 
 export default defineComponent({
   name: "LsButton",
   props:buttonProps,
-  components: {
-    ElButton,
-  },
   setup() {
     const handlerClick = () => {
       alert("WQ!!!!!!");

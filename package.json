@@ -46,7 +46,6 @@
     "@ls-g/components": "workspace:^1.0.0",
     "@ls-g/theme-chalk": "workspace:^1.0.0",
     "@ls-g/utils": "workspace:^1.0.0",
-    "dayjs": "^1.10.7",
-    "element-plus": "^1.1.0-beta.24"
+    "dayjs": "^1.10.7"
   }
 }
