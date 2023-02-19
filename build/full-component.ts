@@ -52,7 +52,7 @@ const buildFull = async () => {
 };
 
 async function buildEntry() {
-    // 读取w-plus目录下的所有内容，包括目录和文件
+    // 读取ls-g目录下的所有内容，包括目录和文件
     const entryFiles = await fs.readdir(wpRoot, { withFileTypes: true });
 
     // 过滤掉 不是文件的内容和package.json文件  index.ts 作为打包入口
@@ -64,7 +64,7 @@ async function buildEntry() {
     const config = {
         input: entryPoints,
         plugins: [nodeResolve(), vue(), typescript()],
-        external: (id: string) => /^vue/.test(id) || /^@w-plus/.test(id),
+        external: (id: string) => /^vue/.test(id) || /^@ls-g/.test(id),
     };
     const bundle = await rollup(config);
     return Promise.all(

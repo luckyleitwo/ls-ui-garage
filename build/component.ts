@@ -32,13 +32,13 @@ const buildEachComponent = async () => {
         const config = {
             input,
             plugins: [nodeResolve(), typescript(), vue(), commonjs()],
-            external: (id) => /^vue/.test(id) || /^@w-plus/.test(id), // 排除掉vue和@w-plus的依赖
+            external: (id) => /^vue/.test(id) || /^@ls-g/.test(id), // 排除掉vue和@ls-g的依赖
         };
         const bundle = await rollup(config);
         const options = Object.values(buildConfig).map((config) => ({
             format: config.format,
             file: path.resolve(config.output.path, `components/${file}/index.js`),
-            paths: pathRewriter(config.output.name), // @w-plus => w-plus/es w-plus/lib  处理路径
+            paths: pathRewriter(config.output.name), // @ls-g => ls-g/es ls-g/lib  处理路径
             exports: "named",
         }));
 
@@ -61,7 +61,7 @@ async function genTypes() {
             outDir: path.resolve(outDir, "types"),
             baseUrl: projectRoot,
             paths: {
-                "@w-plus/*": ["packages/*"],
+                "@ls-g/*": ["packages/*"],
             },
             skipLibCheck: true,
             strict: false,
